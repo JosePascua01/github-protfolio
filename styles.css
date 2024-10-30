@@ -1,0 +1,215 @@
+:root{
+    --header:#232946;
+    --headline-text:#fffffe;
+    --main:#b8c1ec;
+    --text:var(--headline-text);
+    --text2: #eebbc3;
+    --project:#b8c1ec;
+    --border-color: #121629;
+}
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:sans-serif;
+    text-align:center;
+}
+
+#navbar{
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color: var(--header);
+    padding: 20px;
+    box-shadow: -1px 5px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links{
+    display: flex;
+    list-style:none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a{ /*Where you put designs on your text*/
+    text-decoration: none;
+    font-size:large;
+    color:var(--headline-text); 
+    padding:0 40px;
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+section{
+    min-height: 100vh;
+    padding: 70px 0; 
+}
+
+#welcome-section{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--header);
+    color:var(--headline-text);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato';
+    font-size: 50px;
+}
+
+#welcome-section h1{
+    margin-top:30vh;
+    font-size: 50px;
+}
+
+#welcome-section p{
+    margin: 10px;
+    color:var(--text2);
+    font-style:italic;
+}
+
+#projects{
+    background-color: var(--project);
+}
+
+#projects h1{
+ color:var(--header);
+ font-size: 50px;
+ font-weight: 800;
+ width: fit-content;
+ margin:auto;
+ padding-bottom: 25px;;
+}
+
+#projects .projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+    padding:20px;
+    place-items:center;
+    max-width: 1200px;
+    margin:auto;
+}
+
+#projects .project-tile{
+    text-decoration: none;
+    height: 525px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header);
+    color: var(--text);
+    border-radius:  10px;
+    border: 3px solid var(--border-color);
+    box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
+}
+
+#projects .project-tile p{
+    font-size:25px;
+    padding:10px;
+}
+
+#projects .project-tile span{
+    opacity:0%;
+    padding: 0 5px;
+}
+
+#projects .project-tile:hover span{
+    opacity:100%;
+    color:var(--text2);
+    transition: opacity 0.25s ease-in;
+}
+
+#projects .project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px 7px 0 0;
+}
+
+.show-all{
+    text-decoration: none;
+    width:max-content;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0px 15px;
+    background-color: var(--project);
+    color: var(--header);
+    font-size: 25px;
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.show-all:hover{
+    border: 3px solid var(--border-color);
+    background-color: var(--text2);
+    color:var(--header);
+}
+
+#socials-section{
+    background-color: var(--header);
+    color: var(--headline-text);
+}
+
+#socials-section h1{
+    margin: top 300px;
+}
+
+#socials-section .coffee-question{
+    color:var(--text2);
+    font-style:italic;
+}
+
+#socials-section .social-medias{
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#socials-section .social-media{
+    text-decoration: none;
+    color: var(--headline-text);
+    transition:transform 0.2s ease-in;
+    display:flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+}
+
+#socials-section .social-media:hover{
+    transform: translateY(10px);
+}
+
+footer{
+    border-top:3px solid var(--header);
+    background-color: var(--main);
+    color: var(--border-color);
+    font-size: 25px;
+    padding: 30px;
+}
+
+@media only screen and (width < 700px){
+    h1{
+        font-size: 40px;
+    }
+
+    #projects .project-tile{
+        height:600px;
+        width:100%;
+    }
+}
